@@ -1,0 +1,327 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ----------------------General setup--------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:16px;
+}
+
+body {
+    margin: 2rem auto;
+    width:100%;
+    min-width:56rem;
+}
+
+img {
+    width: 100%;
+}
+
+/*------------------------Header & Main-------------------------- */
+
+/* h1 */
+header h1 {
+    text-align: center;
+    padding-bottom: 1rem;
+    padding-top: .5rem;
+}
+
+/* Main Section */
+.main-section {
+    display: grid;
+    grid-template-columns: 4.75fr 1.35fr;
+    grid-gap: 1rem;
+    margin-top: 0rem;
+}
+
+/* Includes Subsection */
+article {
+    grid-column: 1;
+    grid-row: 1;
+    padding-left: 4rem;
+    
+}
+
+/* Main Article img */
+.article-image {
+    float: left;
+    padding-right: .5rem;
+    margin-left: 0rem;
+    margin-right: .5rem;
+    margin-bottom: .6rem;
+    width: 38%;
+    margin-top: 0rem;
+}
+/* -------------------- Main: Subsection---------------------- */
+
+/* Subsection (use flex)*/
+.subsection {
+    display: flex;
+}
+
+/* Flex Figures */
+.Flex {
+    margin: auto;
+    margin-right: 1rem;
+    padding-bottom: none;
+    padding-top: 3.75rem;
+}
+
+/* Flex Captions */
+figcaption {
+    background-color: cornsilk;
+    margin-top: -0.30rem;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    text-indent: .5rem;  
+}
+
+/* --------------------------- Aside--------------------------- */
+aside {
+    grid-column: 2;
+    grid-row: 1;
+    border-left: 1px solid black;
+    padding-left: 1.5rem;
+    padding-right: 4rem;
+}
+
+.aside-seperator {
+    padding-bottom: 1.5rem;
+    padding-top: none;
+    border-bottom: 1px solid black;
+    font-family: opensans, "Arial", sans-serif;
+    font-size: 0.75rem;
+    padding-right: 0rem;
+}
+
+.Demon {
+    padding: none;
+    margin: none;
+}
+
+/* Aside Dots */
+.expand {
+    font-size: .3rem;        
+}
+
+/* --------------------------- Footer-------------------------- */
+
+/* After Main Section */
+footer {
+    position: relative;
+    max-width: inherit;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 1rem;
+    padding-right: 3.1rem;
+}
+
+.copyright {
+    width: 100%;
+    margin: 3rem;
+    margin-top: 1.6rem;
+    margin-left: 3rem;
+    padding-top: 5rem;
+    padding-left: 1rem;
+}
+
+.attributions {
+    text-align: right;
+    grid-column: 2;
+    grid-row: 1;
+    padding-left: 3rem;
+    padding-top: 6.8rem;
+}
+
+
+/* ---------------------Font Families----------------------- */
+
+/* Titles */
+@font-face {
+    font-family:rozhaone;
+    src: url(../font/serif/rozhaone-regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Main Body */
+@font-face {
+    font-family: opensans;
+    src: url(../fonts/sans-serif/opensans-regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Center of h1 */
+@font-face {
+    font-family:ultra;
+    src: url(../fonts/serif/ultra-regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* -----------------------Typography-------------------------- */
+
+h1, h2, h3 {
+    font-family: rozhaone, "Georgia", serif;
+}
+
+/* Title */
+h1 {
+    padding: 2rem;
+    font-size: 2.75rem;
+    transform: rotate(-3deg);
+    padding-right: 0rem;
+}
+
+/* Main img Title */
+h2 {
+    font-size: 1.10rem;
+    padding-top: 1.5rem;
+    padding-left: 3.85rem;
+    margin-bottom: none;
+    margin-right: auto;
+}
+
+/* Secondary Titles */
+h3 {
+    font-size: 1rem;
+    margin-top: 0rem;
+    padding-top: 0rem;
+}
+
+/* Body Text */
+p {
+    font-family: opensans, "Arial", sans-serif;
+    font-size: 0.90rem;
+    margin-top: 0rem;
+    padding-right: 1rem;
+}
+
+/*Date*/
+time {font-size: .90rem;}
+
+/* Highlight "Gandalf's" */
+.highlight {
+    font-family: ultra;
+    display: inline-block;
+    background-color: #1C3659;
+    padding: .75 1rem;
+    color: snow;
+    width: 18.5rem;
+    letter-spacing: .16rem;
+    border-radius: .5rem .123rem;
+    box-shadow: 0.25rem 0.25rem 0.125rem #081526;
+}
+
+/* ------------------------- Navigation------------------------- */
+
+nav {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    margin-left: none;
+    padding-left: .4rem;
+    margin-right: none;
+    
+}
+
+/* Nav Links */
+nav a {
+    display: inline-block;
+    padding: 1rem 3rem;
+    margin: .5rem;
+    font-size: 1.5rem;
+    padding-right: 3rem;
+    color: darkslateblue;
+    font-family: sans-serif;
+    
+}
+
+nav a:hover {
+    transform: rotate(4deg);
+    color: black;
+    text-decoration: line-through Black;
+}
+
+/* ----------------------------Links--------------------------- */
+
+/* Link Styling */
+a {
+    color: cadetblue;
+    font-family: rozhaone;
+    text-decoration: none; 
+}
+
+/* --------------------Subscribe Button------------------------- */
+
+/* subscribe button */
+button {
+    font-family: ultra;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    display: inline-block;
+    background-color: #1D3452;
+    color: aliceblue;
+    border-radius: .5rem .5rem;
+    padding: .75rem .5rem;
+    margin-top: 3rem;
+    box-shadow: 0.15rem 0.15rem 0.125rem #132640;
+}
+
+button:hover {
+    cursor:pointer;
+}
+
+
+
+
+
